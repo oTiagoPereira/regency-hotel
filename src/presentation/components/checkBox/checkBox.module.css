@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+.check {
+    position: relative;
+    bottom: 40px;
+    width: 90%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: var(--background_secondary);
+    color: var(--tertiary);
+}
+
+.check_img {
+    width: 25px;
+}
+
+.check_text {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+
+.title_check {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.check_in, .check_out, .check_quartos, .check_pessoas, .btn_disponibilidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0px 20px;
+}
+
+.btn_disponibilidade {
+    width: 200px;
+    height: 60px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--tertiary);
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+
+.btn_disponibilidade:hover {
+    background-color: var(--neutral);
+}
+
+.check_line {
+    bottom: 0;
+    width: 1px;
+    height: 30px;
+    background-color: var(--tertiary);
+}
+
+.text_bottom_check {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    top: 100px;
+    width: 100%;
+    text-align: center;
+    color: var(--title);
+    font-size: 0.8rem;
+    font-weight: normal;
+    margin: 0 20px;
+    z-index: 2;
+}

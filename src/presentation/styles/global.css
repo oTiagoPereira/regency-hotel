@@ -1,0 +1,19 @@
+:root {
+    --background_primary: #F1E4D3;
+    --background_secondary: #2F4F4F;
+    --background_tertiary: #f8f8f8;
+
+    --primary: #2F4F4F;
+    --secondary: #7B2C3B;
+    --tertiary: #F1E4D3;
+    --quaternary: #B76E79;
+    --quinary: #9c4756;
+    --neutral: #F8F8F8F8;
+
+    --title: #4A4A4A;
+    --title_secondary: #F8F8F8F8;
+    --title_destack: #7B2C3B;
+    --text: #626262;
+    --text_navbar: #F1E4D3;
+
+}

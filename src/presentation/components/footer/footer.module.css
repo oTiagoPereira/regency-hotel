@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+.footer{
+    position: relative;
+    background-color: var(--background_primary);
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.navegation, .contact_info, .policies, .languages, .newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: 100%;
+}
+
+.title_footer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--title);
+    margin: 30px 0 10px 0;
+}
+
+.list_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 0.6rem;
+}
+
+.li_footer {
+    list-style: none;
+}
+
+.link_footer {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.icons_social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.img_icon_social {
+    width: 25px;
+    height: 25px;
+    margin: 1rem 0;
+}
+
+.form_footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input_footer {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    padding: 0 10px;
+}
+
+.input_footer::placeholder {
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.input_footer:focus {
+    outline: none;
+}
+
+.btn_footer {
+    width: 100px;
+    height: 30px;
+    border-radius:0 5px 5px 0;
+    border: none;
+    background-color: var(--primary);
+    color: var(--tertiary);
+    cursor: pointer;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: var(--background_secondary);
+    color: var(--tertiary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.link_copyright {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--tertiary);
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.link_copyright::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 1px;
+    background-color: var(--tertiary);
+    transition: transform 0.4s ease;
+}
+
+.link_copyright:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}

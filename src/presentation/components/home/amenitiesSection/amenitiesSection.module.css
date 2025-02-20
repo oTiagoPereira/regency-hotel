@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+.container_amenities {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0 4rem;
+}
+
+.title_amenities {
+    width: 100%;
+    margin: 10px 0px;
+    text-align: left;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--title);
+}
+
+.text_amenities {
+    width: 100%;
+    padding: 0 45% 0 0;
+    text-align: left;
+    font-size: 1rem;
+    color: var(--text);
+    margin: 10px 0;
+    opacity: 90%;
+}
+
+.container_box_amenities {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.box_amenities {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 0;
+    width: 400px;
+    height: 250px;
+    background-color: var(--background_secondary);
+    border-radius: 5px;
+}
+
+.title_box_amenities {
+    margin: 10px 20px;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--neutral);
+    opacity: 90%;
+}
+
+.text_box_amenities {
+    margin: 10px 20px;
+    text-align: left;
+    font-size: 1rem;
+    color: var(--neutral);
+    opacity: 80%;
+}
+
+.btn_amenities {
+    margin: 10px 20px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--tertiary);
+    color: var(--primary);
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+
+.btn_amenities:hover {
+    background-color: var(--neutral);
+}
+
+.btn_all_amenities {
+    margin: 100px 0 0 0;
+    min-width: 150px;
+    min-height: 50px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: transparent;
+    color: var(--primary);
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+
+.btn_all_amenities:hover {
+    background-color: var(--primary);
+    color: var(--neutral);
+    border: none;
+}
