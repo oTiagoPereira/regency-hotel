@@ -4,6 +4,7 @@ import CalendarioImg from "../../../assets/calendario.svg";
 import Cama from "../../../assets/bed.svg";
 import Pessoas from "../../../assets/people.svg";
 import Calendar from "./calendar";
+import { addDays } from "date-fns";
 
 export default function CheckBox() {
   const [checkInDate, setCheckInDate] = useState(null);
@@ -12,7 +13,9 @@ export default function CheckBox() {
   const [isCheckInCalendarVisible, setCheckInCalendarVisible] = useState(false);
   const checkInCalendarRef = useRef(null);
 
-  const [selectedCheckOutDate, setSelectedCheckOutDate] = useState(new Date());
+  const [selectedCheckOutDate, setSelectedCheckOutDate] = useState(() =>
+    addDays(new Date(), 1)
+  );
   const [isCheckOutCalendarVisible, setCheckOutCalendarVisible] =
     useState(false);
   const checkOutCalendarRef = useRef(null);
