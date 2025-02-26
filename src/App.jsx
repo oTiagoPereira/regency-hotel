@@ -1,25 +1,22 @@
-import './App.css'
-import CheckBox from './presentation/components/checkBox'
-import Footer from './presentation/components/footer'
-import Amenities from './presentation/components/home/amenitiesSection'
-import EventsAndActivities from './presentation/components/home/eventsAndActivities'
-import RoomsSection from './presentation/components/home/roomsSection'
-import Navbar from './presentation/components/navBar'
-import Home from './presentation/pages/Home'
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./presentation/pages/Home";
+import Rooms from "./presentation/pages/Rooms";
+import NotFound from "./presentation/pages/_NotFound";
 
 function App() {
-
   return (
     <>
-      <Navbar />
-      <Home />
-      <CheckBox />
-      <RoomsSection />
-      <EventsAndActivities />
-      <Amenities />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route exact path="/" Component={Home} />
+          <Route path="/rooms" Component={Rooms} />
+
+          <Route path="*" Component={NotFound} />
+        </Routes>
+      </Router>
     </>
-  )
+  );
 }
 
 export default App;
