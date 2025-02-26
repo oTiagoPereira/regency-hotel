@@ -1,7 +1,7 @@
 import styles from "./checkBox.module.css";
 import React from "react";
 import CalendarioImg from "../../../assets/calendario.svg";
-import Cama from "../../../assets/bed.svg";
+import CamaIcon from "../../../assets/camaIcon.svg";
 import Pessoas from "../../../assets/people.svg";
 
 export default function CheckBox() {
@@ -41,7 +41,7 @@ export default function CheckBox() {
 
       <div className={styles.check_quartos}>
         <div className={styles.box_img_check}>
-          <img src={Cama} alt="Cama" className={styles.check_img} />
+          <img src={CamaIcon} alt="Cama" className={styles.check_img} />
         </div>
         <div className={styles.check_text}>
           <p className={styles.quant_quartos}>1 Quarto</p>
