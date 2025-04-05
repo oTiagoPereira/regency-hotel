@@ -1,5 +1,6 @@
 import styles from "./navBar.module.css";
 import logo from "../../../assets/logo.svg";
+import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <header className={styles.header}>
@@ -7,53 +8,53 @@ export default function Navbar() {
         <div className={styles.navegation_left}>
           <ul className={styles.list_nav}>
             <li className={styles.li_nav}>
-              <a href="/" className={styles.link_nav}>
+              <Link to={"/"} className={styles.link_nav}>
                 Home
-              </a>
+              </Link>
             </li>
             <li className={styles.li_nav}>
-              <a href="#" className={styles.link_nav}>
+              <Link to={'/hospedagem'} className={styles.link_nav}>
                 Hospedagem
-              </a>
+              </Link>
             </li>
             <li className={styles.li_nav}>
-              <a href="#" className={styles.link_nav}>
+              <Link to={'/restaurante'} className={styles.link_nav}>
                 Restaurante
-              </a>
+              </Link>
             </li>
             <li className={styles.li_nav}>
-              <a href="#" className={styles.link_nav}>
+              <Link to={'/saiba-mais'} className={styles.link_nav}>
                 Saiba Mais
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div className={styles.logo_center}>
-          <a href="/" className={styles.link_logo}>
+          <Link to={'/'} className={styles.link_logo}>
             <img src={logo} alt="logo" className={styles.img_logo} />
-          </a>
+          </Link>
         </div>
         <div className={styles.navegation_right}>
           <ul className={styles.list_nav}>
             <li className={styles.li_nav}>
-              <a href="#" className={styles.link_nav}>
+              <Link to={'/eventos'} className={styles.link_nav}>
                 Eventos
-              </a>
+              </Link>
             </li>
             <li className={styles.li_nav}>
-              <a href="#" className={styles.link_nav}>
+              <Link to={'promocoes'} className={styles.link_nav}>
                 Promoções
-              </a>
+              </Link>
             </li>
             <li className={styles.li_nav}>
-              <a href="#" className={styles.link_nav}>
+              <Link to={'/contatos'} className={styles.link_nav}>
                 Contato
-              </a>
+              </Link>
             </li>
             <li className={styles.li_nav}>
-              <a href="#" className={styles.link_nav}>
+              <Link to={'/login'} className={styles.link_nav}>
                 Login
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
