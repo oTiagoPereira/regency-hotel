@@ -9,10 +9,9 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route exact path="/" Component={Home} />
-          <Route path="/rooms" Component={Rooms} />
-
-          <Route path="*" Component={NotFound} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/rooms" element={<Rooms />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </>
