@@ -1,10 +1,12 @@
 import styles from "./checkBox.module.css";
 import React, { useState, useEffect, useRef } from "react";
+import { addDays } from "date-fns";
 import CalendarioImg from "../../../assets/calendario.svg";
 import Cama from "../../../assets/bed.svg";
 import Pessoas from "../../../assets/people.svg";
 import Calendar from "./calendar";
-import { addDays } from "date-fns";
+import RoomSelector from "./roomSelector";
+import GuestSelector from "./guestSelector";
 
 export default function CheckBox() {
   const [checkInDate, setCheckInDate] = useState(null);
@@ -12,6 +14,10 @@ export default function CheckBox() {
   const [selectedCheckInDate, setSelectedCheckInDate] = useState(new Date());
   const [isCheckInCalendarVisible, setCheckInCalendarVisible] = useState(false);
   const checkInCalendarRef = useRef(null);
+  const [selectedRooms, setSelectedRooms] = useState(1);
+  const [isRoomSelectorVisible, setRoomSelectorVisible] = useState(false);
+  const roomSelectorRef = useRef(null);
+  const [guests, setGuests] = useState({ adults: 1, children: 0 });
 
   const [selectedCheckOutDate, setSelectedCheckOutDate] = useState(() =>
     addDays(new Date(), 1)
@@ -19,6 +25,11 @@ export default function CheckBox() {
   const [isCheckOutCalendarVisible, setCheckOutCalendarVisible] =
     useState(false);
   const checkOutCalendarRef = useRef(null);
+
+
+  const toggleRoomSelector = () => {
+    setRoomSelectorVisible(!isRoomSelectorVisible);
+  };
 
   const handleCheckInDateSelect = (date) => {
     setSelectedCheckInDate(date);
@@ -43,10 +54,10 @@ export default function CheckBox() {
         setCheckInCalendarVisible(false);
       }
       if (
-        checkOutCalendarRef.current &&
-        !checkOutCalendarRef.current.contains(event.target)
+        roomSelectorRef.current &&
+        !roomSelectorRef.current.contains(event.target)
       ) {
-        setCheckOutCalendarVisible(false);
+        setRoomSelectorVisible(false);
       }
     }
 
@@ -124,12 +135,15 @@ export default function CheckBox() {
         <span className={styles.check_line}></span>
 
         {/* Quartos */}
-        <div className={styles.check_quartos}>
+        <div
+          className={styles.check_quartos}
+          onClick={toggleRoomSelector}
+        >
           <div className={styles.box_img_check}>
             <img src={Cama} alt="Cama" className={styles.check_img} />
           </div>
           <div className={styles.check_text}>
-            <p className={styles.quant_quartos}>1 Quarto</p>
+            <RoomSelector onSelect={setSelectedRooms} />
           </div>
         </div>
 
@@ -141,7 +155,9 @@ export default function CheckBox() {
             <img src={Pessoas} alt="Pessoas" className={styles.check_img} />
           </div>
           <div className={styles.check_text}>
-            <p className={styles.quant_pessoas}>1 Adulto, 2 Crianças</p>
+              <GuestSelector
+                onSelect={(adults, children) => setGuests({ adults, children })}
+              />
           </div>
         </div>
 
