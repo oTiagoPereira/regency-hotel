@@ -29,7 +29,7 @@ export default function Footer() {
             </li>
             <li className={styles.li_footer}>
               <Link to={'/hospedagem'} className={styles.link_footer}>
-                Hospegagem
+                Hospedagem
               </Link>
             </li>
             <li className={styles.li_footer}>
