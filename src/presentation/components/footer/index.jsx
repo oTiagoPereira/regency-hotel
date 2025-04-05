@@ -3,6 +3,7 @@ import IconFacebook from "../../../assets/facebook.svg";
 import IconInstagram from "../../../assets/instagram.svg";
 import IconYoutube from "../../../assets/youtube.svg";
 import IconX from "../../../assets//x.svg";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -12,34 +13,34 @@ export default function Footer() {
           <h3 className={styles.title_footer}>Navegação Rápida</h3>
           <ul className={styles.list_footer}>
             <li className={styles.li_footer}>
-              <a href="/" className={styles.link_footer}>
+              <Link to={'/'} className={styles.link_footer}>
                 Home
-              </a>
+              </Link>
             </li>
             <li className={styles.li_footer}>
-              <a href="#" className={styles.link_footer}>
+              <Link to={'/acomodacoes'} className={styles.link_footer}>
                 Acomodações
-              </a>
+              </Link>
             </li>
             <li className={styles.li_footer}>
-              <a href="#" className={styles.link_footer}>
+              <Link to={'/eventos'} className={styles.link_footer}>
                 Eventos
-              </a>
+              </Link>
             </li>
             <li className={styles.li_footer}>
-              <a href="#" className={styles.link_footer}>
-                Hospegagem
-              </a>
+              <Link to={'/hospedagem'} className={styles.link_footer}>
+                Hospedagem
+              </Link>
             </li>
             <li className={styles.li_footer}>
-              <a href="#" className={styles.link_footer}>
+              <Link to={'/promocoes'} className={styles.link_footer}>
                 Promoções
-              </a>
+              </Link>
             </li>
             <li className={styles.li_footer}>
-              <a href="#" className={styles.link_footer}>
+              <Link to={'/sobre-nos'} className={styles.link_footer}>
                 Sobre Nós
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -60,59 +61,59 @@ export default function Footer() {
               </a>
             </li>
             <li className={styles.li_footer}>
-              <a href="#" className={styles.link_footer}>
+              <Link to={'#'} className={styles.link_footer}>
                 Rua Regency Blvd, 123
-              </a>
+              </Link>
             </li>
           </ul>
           <div className={styles.icons_social}>
-            <a href="#" className={styles.link_social}>
+            <Link to={'#'} className={styles.link_social}>
               <img
                 src={IconInstagram}
                 alt="Icon Instagram"
                 className={styles.img_icon_social}
               />
-            </a>
-            <a href="#" className={styles.link_social}>
+            </Link>
+            <Link to={'#'} className={styles.link_social}>
               <img
                 src={IconFacebook}
                 alt="Icon Facebook"
                 className={styles.img_icon_social}
               />
-            </a>
-            <a href="#" className={styles.link_social}>
+            </Link>
+            <Link to={'#'} className={styles.link_social}>
               <img
                 src={IconYoutube}
                 alt="Icon Youtube"
                 className={styles.img_icon_social}
               />
-            </a>
-            <a href="#" className={styles.link_social}>
+            </Link>
+            <Link to={'#'} className={styles.link_social}>
               <img
                 src={IconX}
                 alt="Icon X"
                 className={styles.img_icon_social}
               />
-            </a>
+            </Link>
           </div>
         </div>
         <div className={styles.policies}>
           <h3 className={styles.title_footer}>Políticas</h3>
           <ul className={styles.list_footer}>
             <li className={styles.li_footer}>
-              <a href="#" className={styles.link_footer}>
+              <Link to={'/politicas-cancelamento'} className={styles.link_footer}>
                 Políticas de cancelamento e reservas
-              </a>
+              </Link>
             </li>
             <li className={styles.li_footer}>
-              <a href="#" className={styles.link_footer}>
+              <Link to={'/politica-privacidade'} className={styles.link_footer}>
                 Política de privacidade
-              </a>
+              </Link>
             </li>
             <li className={styles.li_footer}>
-              <a href="#" className={styles.link_footer}>
+              <Link to={'/termos-condicoes'} className={styles.link_footer}>
                 Termos e condições
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

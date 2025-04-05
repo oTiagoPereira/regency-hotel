@@ -42,7 +42,7 @@
     align-items: flex-start;
     justify-content: space-between;
     padding: 1rem 0;
-    width: 400px;
+    width: 32%;
     height: 250px;
     background-color: var(--background_secondary);
     border-radius: 5px;
@@ -86,7 +86,7 @@
 .btn_all_rooms {
     margin: 100px 0 0 0;
     width: 150px;
-    height: 50px;
+    min-height: 50px;
     border: 1px solid var(--primary);
     border-radius: 5px;
     font-size: 1rem;
