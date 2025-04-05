@@ -26,7 +26,6 @@ export default function CheckBox() {
     useState(false);
   const checkOutCalendarRef = useRef(null);
 
-
   const toggleRoomSelector = () => {
     setRoomSelectorVisible(!isRoomSelectorVisible);
   };
@@ -135,10 +134,7 @@ export default function CheckBox() {
         <span className={styles.check_line}></span>
 
         {/* Quartos */}
-        <div
-          className={styles.check_quartos}
-          onClick={toggleRoomSelector}
-        >
+        <div className={styles.check_quartos} onClick={toggleRoomSelector}>
           <div className={styles.box_img_check}>
             <img src={Cama} alt="Cama" className={styles.check_img} />
           </div>
@@ -146,33 +142,34 @@ export default function CheckBox() {
             <RoomSelector onSelect={setSelectedRooms} />
           </div>
 
-        <span className={styles.check_line}></span>
+          <span className={styles.check_line}></span>
 
-        {/* Pessoas */}
-        <div className={styles.check_pessoas}>
-          <div className={styles.box_img_check}>
-            <img src={Pessoas} alt="Pessoas" className={styles.check_img} />
-          </div>
-          <div className={styles.check_text}>
+          {/* Pessoas */}
+          <div className={styles.check_pessoas}>
+            <div className={styles.box_img_check}>
+              <img src={Pessoas} alt="Pessoas" className={styles.check_img} />
+            </div>
+            <div className={styles.check_text}>
               <GuestSelector
                 onSelect={(adults, children) => setGuests({ adults, children })}
               />
+            </div>
           </div>
-        </div>
 
-        <span className={styles.check_line}></span>
+          <span className={styles.check_line}></span>
 
-        {/* Botão */}
-        <button className={styles.btn_disponibilidade}>
-          Verificar Disponibilidade
-        </button>
+          {/* Botão */}
+          <button className={styles.btn_disponibilidade}>
+            Verificar Disponibilidade
+          </button>
 
-        <div className={styles.text_bottom_check}>
-          <h4>
-            Reserve diretamente conosco para aproveitar o Regency Heights, um
-            programa flexível de check-in e check-out e receba os melhores
-            valores disponíveis.
-          </h4>
+          <div className={styles.text_bottom_check}>
+            <h4>
+              Reserve diretamente conosco para aproveitar o Regency Heights, um
+              programa flexível de check-in e check-out e receba os melhores
+              valores disponíveis.
+            </h4>
+          </div>
         </div>
       </div>
     </section>
