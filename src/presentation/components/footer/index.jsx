@@ -61,27 +61,27 @@ export default function Footer() {
               </a>
             </li>
             <li className={styles.li_footer}>
-              <Link to={''} className={styles.link_footer}>
+              <Link to={'#'} className={styles.link_footer}>
                 Rua Regency Blvd, 123
               </Link>
             </li>
           </ul>
           <div className={styles.icons_social}>
-            <Link to={''} className={styles.link_social}>
+            <Link to={'#'} className={styles.link_social}>
               <img
                 src={IconInstagram}
                 alt="Icon Instagram"
                 className={styles.img_icon_social}
               />
             </Link>
-            <Link to={''} className={styles.link_social}>
+            <Link to={'#'} className={styles.link_social}>
               <img
                 src={IconFacebook}
                 alt="Icon Facebook"
                 className={styles.img_icon_social}
               />
             </Link>
-            <Link to={''} className={styles.link_social}>
+            <Link to={'#'} className={styles.link_social}>
               <img
                 src={IconYoutube}
                 alt="Icon Youtube"
