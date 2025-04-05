@@ -2,7 +2,7 @@ import styles from "./checkBox.module.css";
 import React, { useState, useEffect, useRef } from "react";
 import { addDays } from "date-fns";
 import CalendarioImg from "../../../assets/calendario.svg";
-import Cama from "../../../assets/bed.svg";
+import CamaIcon from "../../../assets/camaIcon.svg";
 import Pessoas from "../../../assets/people.svg";
 import Calendar from "./calendar";
 import RoomSelector from "./roomSelector";
@@ -145,7 +145,6 @@ export default function CheckBox() {
           <div className={styles.check_text}>
             <RoomSelector onSelect={setSelectedRooms} />
           </div>
-        </div>
 
         <span className={styles.check_line}></span>
 
