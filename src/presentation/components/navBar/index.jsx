@@ -42,7 +42,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li className={styles.li_nav}>
-              <Link to={'promocoes'} className={styles.link_nav}>
+              <Link to={'/promocoes'} className={styles.link_nav}>
                 Promoções
               </Link>
             </li>
